@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="logo">DASHBORD</div>
+        <div className="logo">DASHBOARD</div>
         <nav className="App-nav">
           <ul>
             <li><a href="#">MOVES</a></li>
@@ -56,7 +56,7 @@ function App() {
               <div className="placeholder-chart">
                 {dashboardData.chartData1.map((data, index) => (
                   <div key={index} className="chart-bar" style={{ height: `${data.value}%` }}>
-                    {data.label}
+                    <span>{data.label}</span>
                   </div>
                 ))}
               </div>
@@ -66,7 +66,7 @@ function App() {
               <div className="placeholder-chart">
                 {dashboardData.chartData2.map((data, index) => (
                   <div key={index} className="chart-bar" style={{ height: `${data.value}%` }}>
-                    {data.label}
+                    <span>{data.label}</span>
                   </div>
                 ))}
               </div>

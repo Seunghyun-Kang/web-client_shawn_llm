@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
 }
 
@@ -16,6 +16,7 @@ body, html {
   padding: 20px;
   background-color: #1a1a2e;
   color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -38,8 +39,10 @@ body, html {
   text-decoration: none;
   color: #eaeaea;
   font-size: 16px;
+  transition: color 0.3s;
 }
 
+.App-nav ul li a:hover,
 .App-nav ul li.active a {
   color: #00aaff;
 }
@@ -55,9 +58,10 @@ body, html {
 }
 
 .dashboard-header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .dashboard-header h1 {
@@ -78,6 +82,7 @@ body, html {
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .charts {
@@ -87,9 +92,10 @@ body, html {
 
 .chart {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .placeholder-chart {
@@ -97,8 +103,10 @@ body, html {
   justify-content: space-around;
   align-items: flex-end;
   height: 200px;
-  background-color: #ddd;
+  background-color: #f5f5f5;
   border: 1px dashed #999;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .chart-bar {
@@ -110,6 +118,21 @@ body, html {
   color: #fff;
   font-size: 14px;
   margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.chart-bar span {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.chart-bar:hover {
+  background-color: #007acc;
 }
 
 .additional-widgets {
@@ -119,15 +142,17 @@ body, html {
 
 .widget {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .news-widget .placeholder-news {
-  background-color: #ddd;
+  background-color: #f5f5f5;
   padding: 20px;
   border: 1px dashed #999;
+  border-radius: 10px;
   text-align: left;
   font-size: 18px;
   color: #555;
@@ -140,5 +165,11 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00aaff;
+  outline: none;
 }
 
